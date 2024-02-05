@@ -17,6 +17,8 @@ From here the player will continue to roll dice until the following outcomes hap
   • You’ll roll the point once again. In this case the player wins.
   
   • You’ll roll a seven. In this case the player loses
+  
+--------------------------------------------------------------------------------------------------------------------------------------------------------  
 
 UNO
 
