@@ -15,4 +15,5 @@ This isn’t one of the two deciding cases listed above, so you’ll need to rec
 From here the player will continue to roll dice until the following outcomes happen:
 
   • You’ll roll the point once again. In this case the player wins.
+  
   • You’ll roll a seven. In this case the player loses
