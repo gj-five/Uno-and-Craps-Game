@@ -24,17 +24,17 @@ UNO
 
 Initially both you and the computer will be dealt seven cards. From here the rules are as follows:
 
-  • After the two hands are dealt, the remaining cards are placed in the center of the table face
-  down (this is called the draw pile).
+    • After the two hands are dealt, the remaining cards are placed in the center of the table face
+    down (this is called the draw pile).
+    
+    • You will remove the top card and display it. This top card will be the start of something called
+    the discard pile.
+    
+    • You and the computer will then alternate turns. When it’s your turn, you can play any card in
+    your hand that matches the number, symbol, or color on the top of the discard pile.
   
-  • You will remove the top card and display it. This top card will be the start of something called
-  the discard pile.
+      o For instance, if the discard pile has a green 6, you can play a red 6, a green 4, etc.
   
-  • You and the computer will then alternate turns. When it’s your turn, you can play any card in
-  your hand that matches the number, symbol, or color on the top of the discard pile.
-  
-  o For instance, if the discard pile has a green 6, you can play a red 6, a green 4, etc.
-  
-  • If you are unable to play a card, you must draw a card from the draw pile.
-  
-  • Eventually the game ends when either player has no cards remaining.
+    • If you are unable to play a card, you must draw a card from the draw pile.
+    
+    • Eventually the game ends when either player has no cards remaining.
