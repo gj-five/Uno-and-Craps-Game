@@ -2,8 +2,10 @@
 
 Craps Game
 With this game you are given two dice to roll. You’ll need to consider two outcomes:
+
   1. The initial roll of the dice
   2. Subsequent rolls of the dice
+
 The first roll of the dice is important. If the initial roll is either 7 or 11, the player wins. If the initial roll
 is either 2, 3, or 12 the player loses. If it’s either of those two numbers, you’ll need to store that initial roll as the player’s point.
 
