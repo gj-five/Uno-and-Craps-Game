@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="styles.css">
+    <title>Uno</title>
+</head>
+<body>
+    <div class="player-2">
+        <div class="card">
+            <div class="logo"></div>
+        </div>
+        <div class="light"></div> 
+    </div>
+    <div class="player-3 hide">
+        <div class="light"></div>
+        <div class="card">
+            <div class="logo"></div>
+        </div>
+    </div>
+    
+    <div id="winBox" class="win-box hide">
+        <p>You won the game!</p>
+    </div>
+    <div class="deck" id="deck" onclick="turnDeckCard(this)">
+        <!-- handle with JS -->
+    </div>
+    <div class="table-card" id="tableCard">
+        <!-- updated with JS -->
+    </div>
+    <div class="cards-container" id="cardsContainer">
+        <!-- filled with JS -->
+    </div>
+    <!-- <div class="choose-color-window hide">
+        <div class="colors-container">
+            <div class="red color"></div>
+            <div class="yellow color"></div>
+            <div class="green color"></div>
+            <div class="blue color"></div>
+        </div>
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+
+body {
+  background-color: #22303C;
+  min-height: 100vh;
+  overflow: hidden;
+}
+@keyframes mymove {
+  0%   {transform: rotateY(0deg) rotateZ(0deg);}
+  100% {transform: rotateY(0deg) rotateZ(360deg);}
+}
+@keyframes mymove2 {
+  0%   {transform: rotateY(180deg) rotateZ(0deg);}
+  100% {transform: rotateY(180deg) rotateZ(3600deg);}
+}
+.table-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: calc( 50% - 57px );
+  transform: translateY(-50%, -50%);
+}
+.table-card .card {
+  position: absolute;
+  left: 50%;
+}
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.card {
+  min-width: 110px;
+  width: 110px;
+  height: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 7px;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+  z-index: 0;
+  margin-right: 10px; /* Add margin between cards */
+}
+.cards-container .card {
+  margin-bottom: -10px;
+  margin-left: -8px;
+}
+.cards-container .card:first-child {
+  margin-left: 0px;
+}
+.my-turn.card {
+  box-shadow: -1px 11px 12px rgba(0,0,0,0.85);
+  transform: translateY(-7px);
+  cursor: pointer;
+}
+.my-turn.card:hover ~ .card {
+  transform: translateX(7px);
+}
+.my-turn.card:hover ~ .my-turn.card {
+  transform: translateX(7px) translateY(-7px);
+}
+.my-turn.card:hover {
+  transform: translateY(-14px);
+}
+.card:before {
+  content: "";
+  width: 78px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transform: rotateZ(10deg);
+  z-index: 1;
+}
+.logo {
+  color: yellow;
+  font-size: 65px;
+  filter: drop-shadow( 3px 3px 3px rgba(0,0,0,0.8) );
+  z-index: 2;
+}
+.winner.player-2 .card,
+.winner.player-3 .card{
+  border: 2px solid green;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 1);
+}
+.winner.player-2 .card .logo,
+.winner.player-3 .card .logo{
+  font-size: 54px;
+  filter: drop-shadow( 0px 0px 2px rgb(2, 199, 2) );
+}
+.player-2,
+.player-3{
+  width: 250px;
+  height: 250px;
+  font-size: 30px;
+  position: absolute;
+  margin: 10px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.player-2 .light,
+.player-3 .light{
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px;
+  transition: all 0.4s;
+}
+.player-2 {
+  top: 10px; /* Adjust the distance from the top as needed */
+  left: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.player-3 {
+  display: none;
+}
+/* .colors-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(121, 121, 121);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+} */
+.color {
+  box-sizing: border-box;
+  width: 50%;
+  height: 50%;
+  transform: scale(0.98);
+  transition: all 0.4s;
+}
+.color:hover {
+  transform: scale(1.02);
+}
+.logo {
+  color: black;
+  font-size: 60px;
+  z-index: 2;
+}
+.win-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Background color */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: none; /* Initially hidden */
+  z-index: 999;
+  font-size: 30px; /* Adjust the font size as needed */
+  border: 2px solid green; /* Green border with 2px width */
+}
+.card.red {
+  background-color: #FF0000;
+}
+.card.yellow {
+  background-color: #FFFF00;
+}
+.card.green {
+  background-color: #008000;
+}
+.card.blue {
+  background-color: #0000FF;
+}
+.deck {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 300px;
+  top: 250px;
+}
+.deck .card.frente {
+  transform: scale(0.9) rotateY(180deg);
+  margin: 5px 5px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+.deck .card.verso {
+  background-color: black; 
+  transform: scale(0.9);
+  margin: 5px 5px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+.deck .card.verso .logo {
+  font-size: 32px;
+}
+.deck.my-time .card.verso {
+  border: 1px solid rgb(7, 177, 83);
+  box-shadow: 0px 0px 10px rgb(40, 252, 135);
+  animation: my-deck-animation 1s infinite;
+  -webkit-animation: my-deck-animation 1s infinite;
+}
+@keyframes my-deck-animation {
+  0% { transform: scale(0.9); }
+  50% {transform: scale(0.92); }
+  100% {transform: scale(0.9); }
+}
+.deck.my-time .card.verso:hover {
+  cursor: pointer;
+}
+.deck.turned .card.frente {
+  transform: scale(0.9) rotateY(0deg);
+}
+.deck.turned .card.verso {
+  transform: scale(0.9) rotateY(180deg);
+}
+.player-2 .card,
+.player-3 .card{
+  background-color: black; 
+  transform: scale(0.9);
+}
